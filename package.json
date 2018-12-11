@@ -1,0 +1,16 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "portals for 15 react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": "~15.6.2",
+    "react-dom": "~15.6.2",
+    "react-draggable": "~2.2.6"
+  },
+  "author": "",
+  "license": "ISC"
+}
