@@ -27,7 +27,14 @@ export class Portal extends React.PureComponent {
   }
 
   renderPortal({children, ...props}) {
-    ReactDOM.render(this.portal, <div {...props}>children</div>);
+    ReactDOM.render(
+      renderer(props, children),
+      this.portal
+    );
+  }
+  
+  renderer(props, children) {
+    return <div {...props}>children</div>;
   }
 
   unrenderPortal() {
