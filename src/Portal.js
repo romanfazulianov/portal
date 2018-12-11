@@ -2,22 +2,18 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 export class Portal extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.target = document.createElement('div');
-    document.body.appendChild(this.target);
-  }
-
-  componentWillReceiveProps(nextProps, nextContext) {
+  componentWillReceiveProps(nextProps) {
     renderPortal(nextProps);
   }
 
   componentDidMount() {
+    this.target = document.createElement('div');
+    document.body.appendChild(this.target);
     renderPortal(this.props);
   }
 
   componentWillUnmount() {
-    unrenderPortal();
+    ReactDOM.unmountComponentAtNode(this.target);
     document.body.removeChild(this.target);
     this.target = void 0;
   }
@@ -32,12 +28,8 @@ export class Portal extends React.PureComponent {
       this.portal
     );
   }
-  
+
   renderer(props, children) {
     return <div {...props}>children</div>;
-  }
-
-  unrenderPortal() {
-    ReactDOM.unmountComponentAtNode(this.target);
   }
 }

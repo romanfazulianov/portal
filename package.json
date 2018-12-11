@@ -9,8 +9,15 @@
   "peerDependencies": {
     "react": "~15.6.2",
     "react-dom": "~15.6.2",
-    "react-draggable": "~2.2.6"
+    "react-draggable": "~2.2.6",
+    "react-redux": "^5.1.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-draggable": "^2.2.6",
+    "react-redux": "^5.1.1"
+  }
 }
