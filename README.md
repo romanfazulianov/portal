@@ -12,8 +12,8 @@
 - DraggablePortal (uses react-draggable, inherits Portal),
 - ConnectedPortal(see below),
 - ConnectedDraggablePortal(see below),
-- createConnectedPortal(uses react-redux to create different
-connected portals on base of Portal and similar interfaces)
+- createConnectedPortal(uses react-redux to create different connected
+portals based on Portal and similar interfaces)
 
 ### What for
 
