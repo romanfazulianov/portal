@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { storeShape } from 'react-redux/lib/utils/PropTypes'
-import { Provider } from 'react-redux'
+import { storeShape } from 'react-redux/lib/utils/PropTypes';
+import { Provider } from 'react-redux';
 
 export const createConnectedPortal = (SuperPortal) =>
   class ReduxPortal extends SuperPortal {
@@ -8,7 +8,12 @@ export const createConnectedPortal = (SuperPortal) =>
       store: storeShape
     };
 
-    renderer(...args) {
-      return <Provider store={this.context.store}>{super.renderer(...args)}</Provider>;
+    renderer (...args) {
+      return (
+        <Provider
+          store={this.context.store}>
+          {super.renderer(...args)}
+        </Provider>
+      );
     }
   };
