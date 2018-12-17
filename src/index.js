@@ -1,12 +1,12 @@
-import { Portal } from './Portal';
-import { DraggablePortal } from './Draggable';
-import { createConnectedPortal } from './createConnectedPortal';
+import {Portal} from './Portal';
+import {DraggablePortal} from './Draggable';
+import {createConnectedPortal} from './createConnectedPortal';
 
 const ConnectedPortal = createConnectedPortal(
-  Portal
+    Portal,
 );
 const ConnectedDraggablePortal = createConnectedPortal(
-  DraggablePortal
+    DraggablePortal,
 );
 
 export {
@@ -14,5 +14,5 @@ export {
   DraggablePortal,
   ConnectedPortal,
   ConnectedDraggablePortal,
-  createConnectedPortal
+  createConnectedPortal,
 };
